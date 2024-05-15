@@ -1,3 +1,4 @@
+import { Buffer } from 'node:buffer';
 import Decoder from './decoder';
 import ipUtil from './ip';
 import { Metadata, parseMetadata } from './metadata';

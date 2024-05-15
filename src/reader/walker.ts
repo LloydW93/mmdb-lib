@@ -1,3 +1,4 @@
+import { Buffer } from 'node:buffer';
 import utils from '../utils';
 
 type NodeReader = (offset: number) => number;

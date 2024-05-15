@@ -1,3 +1,4 @@
+import { Buffer } from 'node:buffer';
 import {version as ipVersion} from 'is-ip';
 
 const parseIPv4 = (input: string): number[] => {

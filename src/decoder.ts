@@ -1,3 +1,4 @@
+import { Buffer } from 'node:buffer';
 import utils from './utils';
 import { Cache } from './types';
 
