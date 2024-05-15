@@ -1,4 +1,3 @@
-import assert from 'assert';
 import Decoder from './decoder';
 import utils from './utils';
 
@@ -35,10 +34,9 @@ export const parseMetadata = (db: Buffer): Metadata => {
     );
   }
 
-  assert(
-    [24, 28, 32].indexOf(metadata.record_size) > -1,
-    'Unsupported record size'
-  );
+  if (!([24, 28, 32].indexOf(metadata.record_size) > -1)) {
+    throw 'Unsupported record size';
+  }
 
   return {
     binaryFormatMajorVersion: metadata.binary_format_major_version,

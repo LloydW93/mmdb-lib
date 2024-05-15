@@ -1,11 +1,9 @@
-import assert from 'assert';
 import utils from './utils';
 import { Cache } from './types';
 
-assert(
-  typeof BigInt !== 'undefined',
-  'Apparently you are using old version of node. Please upgrade to node 10.4.x or above.'
-);
+if (typeof BigInt == 'undefined') {
+  throw "No BigInt type available";
+}
 
 enum DataType {
   Extended = 0,
@@ -47,7 +45,9 @@ export default class Decoder {
   private cache: Cache;
 
   constructor(db: Buffer, baseOffset = 0, cache: Cache = noCache) {
-    assert((this.db = db), 'Database buffer is required');
+    if (!(this.db = db)) {
+      throw "Database buffer is required";
+    }
     this.baseOffset = baseOffset;
     this.cache = cache;
   }

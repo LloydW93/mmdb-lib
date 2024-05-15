@@ -54,5 +54,8 @@
     "format": "prettier --write src",
     "prepublish": "npm run build",
     "semantic-release": "semantic-release"
+  },
+  "dependencies": {
+    "is-ip": "^3.1.0"
   }
 }
