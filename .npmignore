@@ -1,5 +1,7 @@
 benchmark/*.mmdb
 test
+*.test.ts
+.*
 coverage
 .nyc_output
 .DS_Store

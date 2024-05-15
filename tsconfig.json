@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "lib": ["es2021"],
-    "module": "commonjs",
-    "target": "es2021",
+    "lib": ["es2022"],
+    "module": "nodenext",
+    "target": "es2022",
     "outDir": "lib",
 
     "strict": true,
     "declaration": true,
-    "esModuleInterop": true,
+    "esModuleInterop": false,
     "forceConsistentCasingInFileNames": true,
     "strictPropertyInitialization": false,
   },
